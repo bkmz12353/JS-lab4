@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab2.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 4</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 1.А</h1></div>
+    <section>
+        <blockquote>
+
+            <p>	Дан инпут. В него вводится число. Проверьте по вводу, что это число содержит внутри себя цифру 3</p>
+
+        </blockquote>
+        <input id="num" type="text" value="" placeholder="введите число">
+        <script>
+            var elem = document.getElementById('num');
+            elem.addEventListener('click', func);
+
+            function func() {
+                var str = elem.value;
+                var arr = str.split('');
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] == 3) {
+                        alert('содержит ');
+                        return;
+                    }
+                }
+                alert(' не содержит ');
+                return;
+            }
+        </script>
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

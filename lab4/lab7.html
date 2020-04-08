@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 7</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab7.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 4</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 5</h1></div>
+    <section>
+        <blockquote>
+
+            <p>Сделайте селекты день, мес, год. Сделайте так, чтобы не корректную дату нельзя было выбрать (например, 30 февраля нельзя, а 30 марта можно или 29 февраля можно, но только в високосный год). </p>
+
+
+
+
+        </blockquote>
+        <div id="calendar">
+            <select id="month">
+            </select>
+            <select id="year"></select>
+            <select id="day"></select>
+        </div>
+        <script>
+               var day = document.getElementById('day');
+               var month = document.getElementById('month');
+               var year = document.getElementById('year');
+              
+              
+               day.selectedIndex = -1;
+               month.selectedIndex = -1;
+               year.selectedIndex = -1;
+              
+               initSelects(2000, 2020);
+              
+               day.addEventListener("change", function () {
+              
+               if (checkDate(year.value, month.value, day.value) != true){
+
+
+               this.value = 1;
+              
+               }
+              
+               })
+              
+               function initSelects(yearStart, yearEnd) {
+              
+               for (var i = 1; i < 32; i++) {
+              
+               day.add(new Option(i, i));
+              
+               }
+               for (var l = 1; l < 13; l++) {
+switch(l){case(1):month.add(new Option("Январь", l)); break;
+    case(2):month.add(new Option("Февраль", l ));break;
+    case(3):month.add(new Option("Март", l ));break;
+    case(4):month.add(new Option("Апрель", l ));break;
+    case(5):month.add(new Option("Май", l ));break;
+    case(6):month.add(new Option("Июнь", l ));break;
+    case(7):month.add(new Option("Июль", l ));break;
+    case(8):month.add(new Option("Август", l ));break;
+    case(9):month.add(new Option("Сентябрь", l ));break;
+    case(10):month.add(new Option("Октябрь", l ));break;
+    case(11):month.add(new Option("Ноябрь", l ));break;
+    case(12):month.add(new Option("Декабрь", l ));break;}
+
+              
+               }
+               for (var k = yearStart; k < yearEnd+1; k++) {
+              
+               year.add(new Option(k, k));
+              
+               }
+               }
+              
+              
+              
+              
+               function checkDate(year, month, day) {
+              
+               var date = new Date(year, month-1, day);
+               return date.getFullYear() == year && date.getMonth() == month-1 && date.getDate() == day;
+              
+               }
+        </script>
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

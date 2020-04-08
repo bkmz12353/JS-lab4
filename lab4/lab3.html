@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 3</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab3.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 4</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 2.A</h1></div>
+    <section>
+        <blockquote>
+
+            <p> Дан инпут. Выделите любой текст на странице. По окончанию выделения этот текст должен записаться в этот инпут</p>
+
+
+
+        </blockquote>
+
+
+    </section>
+    <input type="text">
+    <p> </p>
+
+    <script>
+        var inp = document.querySelector('input');
+        document.documentElement.addEventListener('mouseup', func);
+
+        function func() {
+            var content = window.getSelection().toString();
+            inp.value = content;
+        }
+    </script>
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

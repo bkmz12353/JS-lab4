@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 4</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab4.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 4</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 2.Б</h1></div>
+    <section>
+        <blockquote>
+
+            <p>	Модифицируйте предыдущую задачу так, чтобы был еще один инпут, в котором задаются символы, из которых формируется эта случайна строка. Символы задаются без всяких разделитетей, в одну строку</p>
+
+
+
+        </blockquote>
+        <input type="text" value="" id="task">
+        <input type="text" value="" id="length" placeholder="введите количество символов строки">
+        <input type="text" value="" id="symbols" placeholder="введите символы">
+        <button id="btn" onclick='func4a()'>Жми</button>
+        <script>
+            var input = document.getElementById('task');
+            var str = document.getElementById('symbols');
+            var leng = document.getElementById('length');
+
+            function func4a() {
+
+                var rand = [];
+                var arr = str.value.split('');
+                var c;
+                var text="";
+
+                for (var i = 0; i < leng.value; i++) {
+                    c=getRandom(-1, arr.length)-1;
+                    alert(c);
+                   rand[i] = arr[c];
+                   text+=rand[i];
+                }
+
+                input.value = text;
+            }
+
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * max - min + 1) + min;
+            }
+        </script>
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>

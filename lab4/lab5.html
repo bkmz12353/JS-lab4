@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Task 5</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="js/lab5.js"></script>
+</head>
+<body>
+
+<div id="wrapper">
+    <header>
+        <div id="header">
+            <div><p1>Введение в интерпретируемые языки</p1></div>
+            <div><p1>Лабораторная работа 4</p1></div>
+        </div>
+    </header>
+
+
+    <div id="heading"><h1>Задание номер 3</h1></div>
+    <section>
+        <blockquote>
+
+            <p>Даны чекбокс. Дана кнопка. По нажатию на кнопку сделайте все чекбоксы отмеченными</p>
+
+        </blockquote>
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+        <button onclick="func()">Отметить</button>
+        <script>
+            function func() {
+                var elem = document.getElementsByTagName('input');
+                for (var i = 0; i < elem.length; i++) {
+                    elem[i].checked = true;
+                }
+            }
+        </script>
+    </section>
+
+</div>
+
+
+
+<footer>
+    <div id="footer" align="right">
+        <div><p1>Волошик Илья</p1></div>
+        <div><p1>Компьютерная физика</p1></div>
+        <div><p1>Вариант-2</p1></div>
+    </div>
+</footer>
+
+</body>
+</html>
